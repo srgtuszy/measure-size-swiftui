@@ -1,0 +1,32 @@
+# MeasureSize for swiftUI
+
+A lightweight view modifier for measuring swiftUI view size during runtime.
+
+## Why?
+
+By default, there's no built-in way to tell a view's size. SwiftUI is pretty good at laying the views out. 
+Specifying relationships between individual views isn't that straightforward. This library provides an easy to use extension which measures 
+a view size which then can be stored using `@State` property wrapper. It's very small too, less than 50 lines of code.
+
+## Usage
+
+Use the following function:
+
+```swift
+func measureSize(_ measureBlock: @escaping (CGSize) -> Void) -> some View
+```
+
+For example:
+
+```swift
+Image(systemName: "ruler.fill")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+    .measureSize { imageHeight = $0.height }
+```
+
+There's also an example app in the repo you can use as reference.
+
+## How to contribute?
+
+All PRs more than welcome! If you see something not working, don't hesitate to open an issue.
