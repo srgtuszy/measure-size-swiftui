@@ -1,0 +1,9 @@
+.DS_Store
+/.build
+/Packages
+xcuserdata/
+DerivedData/
+.swiftpm/**
+.netrc
+MeasureSizeDemo/MeasureSizeDemo.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+MeasureSizeDemo/MeasureSizeDemo.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
