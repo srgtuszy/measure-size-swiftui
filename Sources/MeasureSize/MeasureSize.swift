@@ -33,6 +33,9 @@ private struct MeasureSizeModifier: ViewModifier {
 
 
 public extension View {
+    /// Measures size of a given view.
+    /// - Parameters:
+    ///     - measureBlock: Block invoked after the size has been measured
     func measureSize(_ measureBlock: @escaping (CGSize) -> Void) -> some View {
         return modifier(MeasureSizeModifier())
             .onPreferenceChange(MeasuredSizePreferenceKey.self) { measureBlock($0) }
